@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/flink-simple-tutorial.iml" filepath="$PROJECT_DIR$/.idea/flink-simple-tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streaming/streaming.iml" filepath="$PROJECT_DIR$/streaming/streaming.iml" />
     </modules>
   </component>
 </project>
