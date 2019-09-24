@@ -14,3 +14,5 @@ Flink 是一款能够同时支持高吞吐/低延迟/高性能的分布式处理
 2. [flink使用02-从WordCount开始](<https://xinze.fun/2019/09/03/flink%E4%BD%BF%E7%94%A802-%E4%BB%8EWordCount%E5%BC%80%E5%A7%8B/>) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/blob/master/streaming/src/main/java/wordcount/WordCount.java))
 
 3. [flink使用03-数据输入的几种不同方法](https://xinze.fun/2019/09/04/flink%E4%BD%BF%E7%94%A803-%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E4%B8%8D%E5%90%8C%E6%96%B9%E6%B3%95/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/dataSource))
+
+4. [flink使用04-flink使用04-几种时间概念和watermark](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/timeAndWatermark)
