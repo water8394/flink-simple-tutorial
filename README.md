@@ -16,7 +16,7 @@ Flink 是一款能够同时支持高吞吐/低延迟/高性能的分布式处理
 
 3. [flink使用03-数据输入的几种不同方法](https://xinze.fun/2019/09/04/flink%E4%BD%BF%E7%94%A803-%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E4%B8%8D%E5%90%8C%E6%96%B9%E6%B3%95/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/dataSource))
 
-4. [flink使用04-flink使用04-几种时间概念和watermark](https://xinze.fun/2019/09/24/flink%E4%BD%BF%E7%94%A804-%E5%87%A0%E7%A7%8D%E6%97%B6%E9%97%B4%E6%A6%82%E5%BF%B5%E5%92%8Cwatermark/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/timeAndWatermark))
+4. [flink使用04-几种时间概念和watermark](https://xinze.fun/2019/09/24/flink%E4%BD%BF%E7%94%A804-%E5%87%A0%E7%A7%8D%E6%97%B6%E9%97%B4%E6%A6%82%E5%BF%B5%E5%92%8Cwatermark/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/timeAndWatermark))
 
 5. [flink使用05-窗口简介和简单的使用](https://xinze.fun/2019/09/25/flink%E4%BD%BF%E7%94%A805-%E7%AA%97%E5%8F%A3%E7%AE%80%E4%BB%8B%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/window/assigner))
 
