@@ -1,4 +1,4 @@
-package window.common;
+package window.assigner;
 
 import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.streaming.api.TimeCharacteristic;
