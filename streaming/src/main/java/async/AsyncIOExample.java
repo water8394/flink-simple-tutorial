@@ -19,6 +19,7 @@ public class AsyncIOExample {
 
         DataStream<String> inp = env.fromElements(AsyncIOData.WORDS);
 
+        // 接收数据
         SingleOutputStreamOperator<String> out = inp.map(new MapFunction<String, String>() {
             @Override
             public String map(String s) throws Exception {
@@ -26,8 +27,11 @@ public class AsyncIOExample {
                 return s;
             }
         });
+
+        // 使用 AsyncFunction 对函数做一个简单的处理, 中间随机睡眠 1-10s
         DataStream<String> asyncStream = AsyncDataStream.unorderedWait(out, new SimpleAsyncFunction(), 20_000L, TimeUnit.MILLISECONDS);
 
+        // 对已经被 AsyncFunction 处理过的数据再输出一次
         asyncStream.map(new MapFunction<String, String>() {
             @Override
             public String map(String s) throws Exception {

@@ -45,7 +45,7 @@ public class SourceFunctionToWatermark {
 
         text.print();
 
-        env.execute("Inside DataSource Demo");
+        env.execute();
 
 
     }
