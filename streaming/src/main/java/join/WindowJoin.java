@@ -35,7 +35,7 @@ public class WindowJoin {
         env.execute("Windowed Join Example");
     }
 
-    public static DataStream<Tuple3<String, Integer, Integer>> runWindowJoin(
+    private static DataStream<Tuple3<String, Integer, Integer>> runWindowJoin(
             DataStream<Tuple2<String, Integer>> grades,
             DataStream<Tuple2<String, Integer>> salaries,
             long windowSize) {

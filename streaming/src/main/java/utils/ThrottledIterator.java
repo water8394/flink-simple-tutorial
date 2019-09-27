@@ -5,6 +5,11 @@ import java.util.Iterator;
 import static java.util.Objects.requireNonNull;
 
 
+/**
+ * @author XINZE
+ * 按照固定的频率来生成 next 数据
+ *
+ */
 public class ThrottledIterator<T> implements Iterator<T>, Serializable {
     private static final long serialVersionUID = 1L;
 
