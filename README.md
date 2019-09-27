@@ -22,3 +22,5 @@ Flink 是一款能够同时支持高吞吐/低延迟/高性能的分布式处理
 
 6. [flink使用06-如何处理窗口内的数据](https://xinze.fun/2019/09/26/flink%E4%BD%BF%E7%94%A806-%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E7%AA%97%E5%8F%A3%E5%86%85%E7%9A%84%E6%95%B0%E6%8D%AE/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/window/function))
 
+7. [flink使用07-通过join合并流的操作](https://xinze.fun/2019/09/27/flink%E4%BD%BF%E7%94%A807-%E9%80%9A%E8%BF%87join%E5%90%88%E5%B9%B6%E6%B5%81%E7%9A%84%E6%93%8D%E4%BD%9C/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/join))
+
