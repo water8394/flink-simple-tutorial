@@ -27,3 +27,5 @@ Flink 是一款能够同时支持高吞吐/低延迟/高性能的分布式处理
 8. [flink使用08-在dataStream中使用AsyncFunction](https://xinze.fun/2019/09/27/flink%E4%BD%BF%E7%94%A808-%E5%9C%A8dataStream%E4%B8%AD%E4%BD%BF%E7%94%A8AsyncFunction/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/streaming/src/main/java/async))
 
 9. [flink使用09-DataSet初体验之通过Inputformat构建dataSet](https://xinze.fun/2019/09/29/flink%E4%BD%BF%E7%94%A809-DataSet%E5%88%9D%E4%BD%93%E9%AA%8C%E4%B9%8B%E9%80%9A%E8%BF%87Inputformat%E6%9E%84%E5%BB%BAdataSet/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/batch/src/main/java/inputFormat))
+
+9. [flink使用10-通过Bulk-iterator计算圆周率](https://xinze.fun/2019/10/02/flink%E4%BD%BF%E7%94%A810-%E9%80%9A%E8%BF%87Bulk-iterator%E8%AE%A1%E7%AE%97%E5%9C%86%E5%91%A8%E7%8E%87/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/blob/master/batch/src/main/java/iterator/BulkIteration.java))
