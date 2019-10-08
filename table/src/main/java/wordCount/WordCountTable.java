@@ -4,13 +4,15 @@ import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.java.BatchTableEnvironment;
+import org.apache.flink.table.sinks.CsvTableSink;
 
 
+/**
+ * @author XINZE
+ *
+ * 使用 Table API 来实现 WordCount
+ */
 public class WordCountTable {
-
-    // *************************************************************************
-    //     PROGRAM
-    // *************************************************************************
 
     public static void main(String[] args) throws Exception {
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
@@ -29,13 +31,11 @@ public class WordCountTable {
                 .filter("frequency = 2");
 
         DataSet<WC> result = tEnv.toDataSet(filtered, WC.class);
-
+        String path = "";
+        CsvTableSink tableSink = new CsvTableSink(path, ",");
+        tEnv.registerTableSink("csvSink", tableSink);
         result.print();
     }
-
-    // *************************************************************************
-    //     USER DATA TYPES
-    // *************************************************************************
 
     /**
      * POJO  word
