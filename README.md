@@ -32,3 +32,5 @@ Flink 是一款能够同时支持高吞吐/低延迟/高性能的分布式处理
 10. [flink使用10-通过Bulk-iterator计算圆周率](https://xinze.fun/2019/10/02/flink%E4%BD%BF%E7%94%A810-%E9%80%9A%E8%BF%87Bulk-iterator%E8%AE%A1%E7%AE%97%E5%9C%86%E5%91%A8%E7%8E%87/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/blob/master/batch/src/main/java/iterator/BulkIteration.java))
 
 11. [flink使用11-了解broadcast的用法](https://xinze.fun/2019/10/02/flink%E4%BD%BF%E7%94%A811-%E4%BA%86%E8%A7%A3broadcast%E7%9A%84%E7%94%A8%E6%B3%95/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/blob/master/batch/src/main/java/broadcast/BroadcastExample.java))
+
+12. [flink使用11-用 table API 实现WordCount](https://xinze.fun/2019/10/08/flink%E4%BD%BF%E7%94%A812-%E7%94%A8-table-API-%E5%AE%9E%E7%8E%B0WordCount/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/blob/master/table/src/main/java/wordCount/WordCountTable.java))
