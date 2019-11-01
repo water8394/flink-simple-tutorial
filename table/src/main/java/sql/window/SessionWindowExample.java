@@ -14,7 +14,7 @@ import org.apache.flink.table.api.java.StreamTableEnvironment;
 import java.sql.Timestamp;
 import java.util.Arrays;
 
-public class TumbleWindowExample {
+public class SessionWindowExample {
 
     public static void main(String[] args) throws Exception {
 
@@ -30,13 +30,17 @@ public class TumbleWindowExample {
         DataStream<Tuple3<Long, String,Integer>> log = env.fromCollection(Arrays.asList(
                 //时间 14:53:00
                 new Tuple3<>(1572591180_000L,"xiao_ming",300),
+
+                /*    Start Session   */
                 //时间 14:53:09
                 new Tuple3<>(1572591189_000L,"zhang_san",303),
                 //时间 14:53:12
                 new Tuple3<>(1572591192_000L, "xiao_li",204),
+
+                /*    Start Session   */
                 //时间 14:53:21
                 new Tuple3<>(1572591201_000L,"li_si", 208)
-                ));
+        ));
 
         // 指定时间戳
         SingleOutputStreamOperator<Tuple3<Long, String, Integer>> logWithTime = log.assignTimestampsAndWatermarks(new AscendingTimestampExtractor<Tuple3<Long, String, Integer>>() {
@@ -50,15 +54,15 @@ public class TumbleWindowExample {
         // 转换为 Table
         Table logT = tEnv.fromDataStream(logWithTime, "t.rowtime, name, v");
 
-        Table result = tEnv.sqlQuery("SELECT TUMBLE_START(t, INTERVAL '10' SECOND) AS window_start," +
-                "TUMBLE_END(t, INTERVAL '10' SECOND) AS window_end, SUM(v) FROM "
-                + logT + " GROUP BY TUMBLE(t, INTERVAL '10' SECOND)");
+        // SESSION(time_attr, interval)
+        // interval 表示两条数据触发session的最大间隔
+        Table result = tEnv.sqlQuery("SELECT SESSION_START(t, INTERVAL '5' SECOND) AS window_start," +
+                "SESSION_END(t, INTERVAL '5' SECOND) AS window_end, SUM(v) FROM "
+                + logT + " GROUP BY SESSION(t, INTERVAL '5' SECOND)");
 
         TypeInformation<Tuple3<Timestamp,Timestamp,Integer>> tpinf = new TypeHint<Tuple3<Timestamp,Timestamp,Integer>>(){}.getTypeInfo();
         tEnv.toAppendStream(result, tpinf).print();
 
         env.execute();
     }
-
-
 }

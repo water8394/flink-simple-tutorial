@@ -14,7 +14,7 @@ import org.apache.flink.table.api.java.StreamTableEnvironment;
 import java.sql.Timestamp;
 import java.util.Arrays;
 
-public class TumbleWindowExample {
+public class HOPWindowExample {
 
     public static void main(String[] args) throws Exception {
 
@@ -36,7 +36,7 @@ public class TumbleWindowExample {
                 new Tuple3<>(1572591192_000L, "xiao_li",204),
                 //时间 14:53:21
                 new Tuple3<>(1572591201_000L,"li_si", 208)
-                ));
+        ));
 
         // 指定时间戳
         SingleOutputStreamOperator<Tuple3<Long, String, Integer>> logWithTime = log.assignTimestampsAndWatermarks(new AscendingTimestampExtractor<Tuple3<Long, String, Integer>>() {
@@ -50,15 +50,17 @@ public class TumbleWindowExample {
         // 转换为 Table
         Table logT = tEnv.fromDataStream(logWithTime, "t.rowtime, name, v");
 
-        Table result = tEnv.sqlQuery("SELECT TUMBLE_START(t, INTERVAL '10' SECOND) AS window_start," +
-                "TUMBLE_END(t, INTERVAL '10' SECOND) AS window_end, SUM(v) FROM "
-                + logT + " GROUP BY TUMBLE(t, INTERVAL '10' SECOND)");
+        // HOP(time_attr, interval1, interval2)
+        // interval1 滑动长度
+        // interval2 窗口长度
+        Table result = tEnv.sqlQuery("SELECT HOP_START(t, INTERVAL '5' SECOND, INTERVAL '10' SECOND) AS window_start," +
+                "HOP_END(t, INTERVAL '5' SECOND, INTERVAL '10' SECOND) AS window_end, SUM(v) FROM "
+                + logT + " GROUP BY HOP(t, INTERVAL '5' SECOND, INTERVAL '10' SECOND)");
 
         TypeInformation<Tuple3<Timestamp,Timestamp,Integer>> tpinf = new TypeHint<Tuple3<Timestamp,Timestamp,Integer>>(){}.getTypeInfo();
         tEnv.toAppendStream(result, tpinf).print();
 
         env.execute();
     }
-
 
 }
