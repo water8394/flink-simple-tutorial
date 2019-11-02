@@ -36,3 +36,5 @@ Flink 是一款能够同时支持高吞吐/低延迟/高性能的分布式处理
 12. [flink使用12-用 table API 实现WordCount](https://xinze.fun/2019/10/08/flink%E4%BD%BF%E7%94%A812-%E7%94%A8-table-API-%E5%AE%9E%E7%8E%B0WordCount/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/blob/master/table/src/main/java/wordCount/WordCountTable.java))
 
 13. [flink使用13-开始体验 Flink SQL](https://xinze.fun/2019/10/31/flink%E4%BD%BF%E7%94%A813-%E5%BC%80%E5%A7%8B%E4%BD%93%E9%AA%8C-Flink-SQL/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/blob/master/table/src/main/java/sql/StreamSQLExample.java))
+
+14. [flink使用14-使用SQL操作几种window](https://xinze.fun/2019/11/01/flink%E4%BD%BF%E7%94%A814-%E4%BD%BF%E7%94%A8SQL%E6%93%8D%E4%BD%9C%E5%87%A0%E7%A7%8Dwindow/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/table/src/main/java/sql/window))
