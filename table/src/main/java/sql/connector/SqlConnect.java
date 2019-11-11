@@ -14,27 +14,29 @@ public class SqlConnect {
         TableEnvironment tEnv = TableEnvironment.create(settings);
 
         String kafkaSourceSql = "CREATE TABLE log (\n" +
-                "    t TIMESTAMP, \n" +
+                "    t INT, \n" +
                 "    user_name VARCHAR,\n" +
                 "    cnt INT\n" +
                 ") WITH (\n" +
                 "    'connector.type' = 'kafka',\n" +
                 "    'connector.version' = 'universal',\n" +
                 "    'connector.topic' = 'flink',\n" +
-//                "    'connector.startup-mode' = 'earliest-offset',\n" +
-                "    'connector.properties.0.key' = 'zookeeper.connect',\n" +
-                "    'connector.properties.0.value' = '192.168.56.103:2181',\n" +
+               "    'connector.startup-mode' = 'latest-offset',\n" +
+                "    'connector.properties.0.key' = 'group.id',\n" +
+                "    'connector.properties.0.value' = 'testGroup',\n" +
                 "    'connector.properties.1.key' = 'bootstrap.servers',\n" +
                 "    'connector.properties.1.value' = '192.168.56.103:9092',\n" +
+                "    'connector.specific-offsets.0.partition' = '0',\n" +
+                "    'connector.specific-offsets.0.offset' = '0',\n" +
                 "    'update-mode' = 'append',\n" +
                 "    'format.type' = 'json',\n" +
                 "    'format.derive-schema' = 'true'\n" +
                 ")";
 
         String mysqlSinkSql = "CREATE TABLE sink (\n" +
-                "    t TIMESTAMP,\n" +
+                "    t INT,\n" +
                 "    user_name VARCHAR,\n" +
-                "    cnt INT\n" +
+                "    total INT\n" +
                 ") WITH (\n" +
                 "    'connector.type' = 'jdbc',\n" +
                 "    'connector.url' = 'jdbc:mysql://192.168.56.103:3306/flink',\n" +
