@@ -75,7 +75,7 @@ public class WordCount {
             for (String token : tokens) {
                 if (token.length() > 0) {
                     // Sleep 10s while processing each for word
-                    Thread.sleep(10_000L);
+                    Thread.sleep(1_000L);
                     out.collect(new Tuple2<>(token, 1));
                 }
             }
