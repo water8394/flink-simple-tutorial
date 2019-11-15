@@ -40,3 +40,5 @@ Flink 是一款能够同时支持高吞吐/低延迟/高性能的分布式处理
 14. [flink使用14-使用SQL操作几种window](https://xinze.fun/2019/11/01/flink%E4%BD%BF%E7%94%A814-%E4%BD%BF%E7%94%A8SQL%E6%93%8D%E4%BD%9C%E5%87%A0%E7%A7%8Dwindow/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/table/src/main/java/sql/window))
 
 15. [flink使用15-在Flink-SQL中连接kafka和mysql](https://xinze.fun/2019/11/10/flink%E4%BD%BF%E7%94%A815-%E5%9C%A8Flink-SQL%E4%B8%AD%E8%BF%9E%E6%8E%A5kafka%E5%92%8Cmysql/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/blob/master/table/src/main/java/sql/connector/SqlConnect.java))
+
+16. [flink使用16-正确打包Flink程序并使用Cli提交任务](https://xinze.fun/2019/11/14/flink%E4%BD%BF%E7%94%A816-%E6%AD%A3%E7%A1%AE%E6%89%93%E5%8C%85Flink%E7%A8%8B%E5%BA%8F%E5%B9%B6%E4%BD%BF%E7%94%A8Cli%E6%8F%90%E4%BA%A4%E4%BB%BB%E5%8A%A1/) ([Code Link](https://github.com/CheckChe0803/flink-simple-tutorial/tree/master/batch/src/main/java/wordCount))
