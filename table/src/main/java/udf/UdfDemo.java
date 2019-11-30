@@ -33,6 +33,8 @@ public class UdfDemo {
         tEnv.registerFunction("split", new StringSplit());
         tEnv.registerFunction("get_mean", new Mean());
 
+        //tEnv.registerFunction("top2", new Top2());
+
 
         //Table result = tEnv.sqlQuery("select word,stringLength(word) from " + table);
         //Table result = tEnv.sqlQuery("SELECT a,word, length FROM t, LATERAL TABLE(split(a)) as T(word, length)");
