@@ -39,7 +39,6 @@ public class UdfDemo {
         Table result = tEnv.sqlQuery("SELECT name,get_mean(v) as mean_value FROM t3 GROUP BY name");
 
 
-
         //TypeInformation<Tuple3<String,String,Integer>> tpinf = new TypeHint<Tuple3<String,String,Integer>>(){}.getTypeInfo();
         //TypeInformation<String> tpinf = new TypeHint<String>(){}.getTypeInfo();
         TypeInformation<Tuple2<String,Integer>> tpinf = new TypeHint<Tuple2<String,Integer>>(){}.getTypeInfo();
